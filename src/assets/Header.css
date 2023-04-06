@@ -4,11 +4,28 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem 1rem 3rem;
-    background-color: #0e7490;
-    color: white;
+    color: black;
 }
 
-header h1 {
+.logo,
+.nav-links,
+.nav-cart {
+    width: 18rem;
+}
+
+.logo {
+    text-align: start;
+}
+
+.nav-links {
+    text-align: center;
+}
+
+.nav-cart {
+    text-align: end;
+}
+
+.logo {
     font-size: 4rem;
     font-weight: 700;
 }
@@ -22,8 +39,42 @@ header h1 {
 }
 
 .nav-links li {
-    font-size: 1.2rem;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
-.nav-items li:hover {
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links a:hover {
+    transition: transform 0.5s;
+}
+
+.nav-links li::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background: #0c4a6e;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.nav-links li:hover::after {
+    transform: scaleX(1);
+}
+
+.cart {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.cart:hover {
+    color: #737373;
 }
