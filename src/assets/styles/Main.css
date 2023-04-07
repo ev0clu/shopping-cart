@@ -1,7 +1,6 @@
 main {
-    position: relative;
-    margin: 0 5rem 3rem 5rem;
     flex: 1;
+    margin: 0 5rem 3rem 5rem;
 }
 
 button {
@@ -51,13 +50,19 @@ button:active {
     transform: translateY(0);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     main {
         margin: 0 5rem 1rem 5rem;
     }
 }
 
 @media (max-width: 850px) {
+    main {
+        margin: 0 2rem 1rem 2rem;
+    }
+}
+
+@media (max-width: 420px) {
     main {
         margin: 0 2rem 1rem 2rem;
     }
