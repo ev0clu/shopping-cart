@@ -31,8 +31,8 @@
 }
 
 .img-wrapper:hover {
-    transform: scale(1.05);
-    transition: transform 1s;
+    transform: scale(0.95);
+    transition: transform 0.5s ease;
 }
 
 .img-wrapper {
