@@ -1,27 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../assets/Header.css';
-import { BsCartFill } from 'react-icons/bs';
+import '../assets/styles/Header.css';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Header = () => {
     return (
         <header>
-            <h1 className="logo">T-store</h1>
+            <h1 className="logo">
+                <Link to="/">T-store</Link>
+            </h1>
             <ul className="nav-links">
-                <li>
+                <li className="nav-item">
                     <Link to="/">Home</Link>
                 </li>
-                <li>
-                    <Link to="/product">Product</Link>
+                <li className="nav-item">
+                    <Link to="/store">Store</Link>
                 </li>
-                <li>
+                <li className="nav-item">
                     <Link to="/contact">Contact</Link>
                 </li>
-            </ul>
-            <ul className="nav-cart">
-                <li>
-                    <Link to="/cart" className="cart">
-                        <BsCartFill />
+                <li className="cart">
+                    <Link to="/cart">
+                        <FaShoppingCart />
                     </Link>
                 </li>
             </ul>
