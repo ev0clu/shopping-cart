@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Button from '../elements/Button';
 
@@ -19,7 +20,9 @@ const Home = () => {
                         <br />
                         Check out the store.
                     </p>
-                    <Button className="btn-store" text="Shop" />
+                    <Link to="/store">
+                        <Button className="btn-store" text="Shop" />
+                    </Link>
                 </div>
             </section>
             <h1>2023 collections are here</h1>
