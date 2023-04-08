@@ -33,13 +33,13 @@ const Contact = () => {
                     Lakeview, CA 90210
                 </p>
                 <div className="contact-links">
-                    <a href="www.instagram.com">
+                    <a href="https://www.instagram.com">
                         <BsInstagram />
                     </a>
-                    <a href="www.twitter.com">
+                    <a href="https://www.twitter.com">
                         <BsTwitter />
                     </a>
-                    <a href="www.messenger.com">
+                    <a href="https://www.messenger.com">
                         <BsMessenger />
                     </a>
                 </div>

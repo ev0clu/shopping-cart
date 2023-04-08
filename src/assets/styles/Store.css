@@ -1,0 +1,31 @@
+.store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.store h1 {
+    font-size: 5rem;
+    text-align: center;
+    padding: 3rem 0 3rem 0;
+    letter-spacing: 0.1rem;
+}
+
+.product-group {
+    display: grid;
+    grid-template-columns: repeat(4, 20rem);
+    gap: 5rem;
+}
+
+.item-group {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 16px;
+}
+
+.store img {
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+}
