@@ -48,7 +48,27 @@ const Store = () => {
                             onClick={handleClick}
                         >
                             <img src={item.image} alt={item.title} />
-                            <p>{item.title}</p>
+                            <div className="item-info">
+                                <p>{item.title}</p>
+                                <p>{item.price} EUR</p>
+                            </div>
+                            <div className="btn-group">
+                                <Button
+                                    className="btn-increment"
+                                    text="+"
+                                    onClick={handleClick}
+                                />
+                                <input
+                                    className="quantity"
+                                    type="text"
+                                    value={item.id}
+                                />
+                                <Button
+                                    className="btn-decrement"
+                                    text="-"
+                                    onClick={handleClick}
+                                />
+                            </div>
                             <Button
                                 className="btn-add-cart"
                                 text="Add to cart"

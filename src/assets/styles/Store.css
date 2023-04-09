@@ -13,19 +13,64 @@
 
 .product-group {
     display: grid;
-    grid-template-columns: repeat(4, 20rem);
+    grid-template-columns: repeat(4, 25rem);
     gap: 5rem;
 }
 
 .item-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.5rem;
+    font-size: 2rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
         rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 16px;
 }
 
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-info p:nth-child(1) {
+    height: 7rem;
+}
+
+.item-info p:nth-child(2) {
+    font-weight: 700;
+}
+
+.btn-increment,
+.btn-decrement,
+.quantity,
+.btn-add-cart {
+    font-size: 2rem;
+    border: 1px solid black;
+}
+
+.item-group p {
+    text-align: center;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.quantity {
+    text-align: center;
+    width: 5rem;
+}
+
 .store img {
-    height: 20rem;
+    height: 15rem;
     width: 100%;
+    padding: 1rem 0.5rem 0 0.5rem;
     object-fit: contain;
     object-position: 50% 50%;
 }
