@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/Header.css';
 import { FaShoppingCart } from 'react-icons/fa';
 
-const Header = () => {
+const Header = ({ cartCounter }) => {
     return (
         <header>
             <h1 className="logo">
@@ -21,6 +21,10 @@ const Header = () => {
                 </li>
                 <li className="cart">
                     <Link to="/cart">
+                        {cartCounter > 0 && (
+                            <div className="cart-counter">{cartCounter}</div>
+                        )}
+
                         <FaShoppingCart />
                     </Link>
                 </li>

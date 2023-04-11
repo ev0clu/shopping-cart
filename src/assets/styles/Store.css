@@ -7,14 +7,14 @@
 .store h1 {
     font-size: 5rem;
     text-align: center;
-    padding: 3rem 0 3rem 0;
+    padding: 2rem 0 2rem 0;
     letter-spacing: 0.1rem;
 }
 
 .product-group {
     display: grid;
-    grid-template-columns: repeat(4, 25rem);
-    gap: 5rem;
+    grid-template-columns: repeat(4, 20rem);
+    gap: 3rem;
 }
 
 .item-group {
@@ -46,8 +46,13 @@
 
 .btn-increment,
 .btn-decrement,
-.quantity,
-.btn-add-cart {
+.btn-add-cart,
+.btn-increment:focus,
+.btn-decrement:focus,
+.btn-add-cart:focus,
+.btn-increment:active,
+.btn-decrement:active,
+.btn-add-cart:active {
     font-size: 2rem;
     border: 1px solid black;
 }
@@ -59,18 +64,26 @@
 .btn-group {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .quantity {
-    text-align: center;
-    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 2.5rem;
 }
 
 .store img {
-    height: 15rem;
+    height: 12rem;
     width: 100%;
     padding: 1rem 0.5rem 0 0.5rem;
     object-fit: contain;
     object-position: 50% 50%;
+}
+
+.btn-increment,
+.btn-decrement {
+    width: 2rem;
 }
