@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Header.css';
 import { FaShoppingCart } from 'react-icons/fa';
 
-const Header = ({ cartCounter }) => {
+const Header = ({ cartItems }) => {
+    const [cartCounter, setCartCounter] = useState(0);
+
+    useEffect(() => {
+        const cartSumQuantity = cartItems.reduce(
+            (total, item) => total + item.quantity,
+            0
+        );
+
+        setCartCounter(cartSumQuantity);
+    }, [cartItems]);
+
     return (
         <header>
             <h1 className="logo">

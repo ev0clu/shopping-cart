@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../../assets/styles/Store.css';
 
 import Button from '../elements/Button';
 
-const Store = ({
-    items,
-    quantity,
-    handleIncrementStoreClick,
-    handleDecrementStoreClick,
-    handleAddToCartClick
-}) => {
+const Store = ({ items, handleAddToCartClick }) => {
+    const [quantity, setQuantity] = useState([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
+
+    const handleIncrementStoreClick = (e) => {
+        const index = Number(
+            e.target.parentNode.parentNode.getAttribute('data-index')
+        );
+
+        if (quantity[index] < 10) {
+            const newQuantity = [...quantity];
+            newQuantity[index] = newQuantity[index] + 1;
+            setQuantity(newQuantity);
+        }
+    };
+
+    const handleDecrementStoreClick = (e) => {
+        const index = Number(
+            e.target.parentNode.parentNode.getAttribute('data-index')
+        );
+
+        if (quantity[index] > 1) {
+            const newQuantity = [...quantity];
+            newQuantity[index] = newQuantity[index] - 1;
+            setQuantity(newQuantity);
+        }
+    };
+
     return (
         <div className="store">
             <h1>2023 Sales</h1>

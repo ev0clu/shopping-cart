@@ -7,8 +7,7 @@ const Cart = ({
     cartItems,
     handleIncrementCartClick,
     handleDecrementCartClick,
-    handleRemoveFromCartClick,
-    handleCheckoutClick
+    handleRemoveFromCartClick
 }) => {
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -25,6 +24,10 @@ const Cart = ({
 
         setTotalPrice(sumTotal());
     }, [cartItems]);
+
+    const handleCheckoutClick = () => {
+        alert('Thank you for purchasing');
+    };
 
     return (
         <div className="cart">

@@ -11,14 +11,10 @@ import Cart from './pages/Cart';
 const Main = ({
     items,
     cartItems,
-    quantity,
-    handleIncrementStoreClick,
-    handleDecrementStoreClick,
     handleAddToCartClick,
     handleIncrementCartClick,
     handleDecrementCartClick,
-    handleRemoveFromCartClick,
-    handleCheckoutClick
+    handleRemoveFromCartClick
 }) => {
     return (
         <main>
@@ -29,9 +25,6 @@ const Main = ({
                     element={
                         <Store
                             items={items}
-                            quantity={quantity}
-                            handleIncrementStoreClick={handleIncrementStoreClick}
-                            handleDecrementStoreClick={handleDecrementStoreClick}
                             handleAddToCartClick={handleAddToCartClick}
                         />
                     }
@@ -45,7 +38,6 @@ const Main = ({
                             handleIncrementCartClick={handleIncrementCartClick}
                             handleDecrementCartClick={handleDecrementCartClick}
                             handleRemoveFromCartClick={handleRemoveFromCartClick}
-                            handleCheckoutClick={handleCheckoutClick}
                         />
                     }
                 />
