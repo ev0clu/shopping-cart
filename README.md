@@ -10,7 +10,7 @@ Imaginary basic webshop has built.
 -   Remove items from cart
 -   Increase and decrease the quantity of items
 -   Show the total price of items
--   Shuffle cards after each clicking
+-   Show total quantity of items next to cart icon
 
 ### Developement dependencies
 
@@ -22,7 +22,9 @@ Imaginary basic webshop has built.
 
 ### Layout
 
-![layout picture](https://github.com/ev0clu/shopping-cart/blob/main/layout.png?raw=true)
+![layout1 picture](https://github.com/ev0clu/shopping-cart/blob/main/layout1.png?raw=true)
+
+![layout2 picture](https://github.com/ev0clu/shopping-cart/blob/main/layout2.png?raw=true)
 
 #### Assets
 
