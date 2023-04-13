@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import '../assets/styles/Main.css';
 
+import ScrollToTop from '../components/ScrollToTop';
 import Home from './pages/Home';
 import Store from './pages/Store';
 import Contact from './pages/Contact';
@@ -18,6 +19,7 @@ const Main = ({
 }) => {
     return (
         <main>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route
