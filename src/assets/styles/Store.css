@@ -87,3 +87,126 @@
 .btn-decrement {
     width: 2rem;
 }
+
+@media (max-width: 1450px) {
+    .store h1 {
+        font-size: 4rem;
+    }
+
+    .product-group {
+        grid-template-columns: repeat(4, 15rem);
+        gap: 2rem;
+    }
+
+    .product-item-group {
+        gap: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .product-item-info p:nth-child(1) {
+        height: 5rem;
+    }
+
+    .btn-increment,
+    .btn-decrement,
+    .btn-add-cart,
+    .btn-increment:focus,
+    .btn-decrement:focus,
+    .btn-add-cart:focus,
+    .btn-increment:active,
+    .btn-decrement:active,
+    .btn-add-cart:active {
+        font-size: 1.5rem;
+    }
+
+    .quantity {
+        font-size: 1.5rem;
+        width: 2rem;
+    }
+
+    .store img {
+        height: 10rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .store h1 {
+        font-size: 3rem;
+    }
+
+    .product-group {
+        grid-template-columns: repeat(2, 15rem);
+        gap: 2rem;
+    }
+
+    .product-item-group {
+        gap: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .product-item-info p:nth-child(1) {
+        height: 6rem;
+    }
+
+    .btn-increment,
+    .btn-decrement,
+    .btn-add-cart,
+    .btn-increment:focus,
+    .btn-decrement:focus,
+    .btn-add-cart:focus,
+    .btn-increment:active,
+    .btn-decrement:active,
+    .btn-add-cart:active {
+        font-size: 1.5rem;
+    }
+
+    .quantity {
+        font-size: 1.5rem;
+        width: 2rem;
+    }
+
+    .store img {
+        height: 10rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .store h1 {
+        font-size: 2rem;
+    }
+
+    .product-group {
+        grid-template-columns: repeat(1, 15rem);
+        gap: 2rem;
+    }
+
+    .product-item-group {
+        gap: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .product-item-info p:nth-child(1) {
+        height: 6rem;
+    }
+
+    .btn-increment,
+    .btn-decrement,
+    .btn-add-cart,
+    .btn-increment:focus,
+    .btn-decrement:focus,
+    .btn-add-cart:focus,
+    .btn-increment:active,
+    .btn-decrement:active,
+    .btn-add-cart:active {
+        font-size: 1.5rem;
+    }
+
+    .quantity {
+        font-size: 1.5rem;
+        width: 2rem;
+    }
+
+    .store img {
+        height: 10rem;
+    }
+}

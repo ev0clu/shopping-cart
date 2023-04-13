@@ -92,6 +92,9 @@ header {
     z-index: 1;
 }
 
+@media (max-width: 1450px) {
+}
+
 @media (max-width: 850px) {
     header {
         flex-direction: column;
@@ -109,6 +112,36 @@ header {
 
     .cart-icon {
         font-size: 1.5rem;
-        color: black;
+    }
+
+    .cart-icon-counter {
+        top: 4.8rem;
+        right: 15rem;
+    }
+}
+
+@media (max-width: 420px) {
+    header {
+        flex-direction: column;
+        padding: 1rem 2rem 1rem 2rem;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-item {
+        font-size: 1.2rem;
+    }
+
+    .cart-icon {
+        font-size: 1.2rem;
+    }
+
+    .cart-icon-counter {
+        top: 4rem;
+        right: 4rem;
+        font-size: 0.8rem;
     }
 }

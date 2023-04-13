@@ -88,7 +88,7 @@
     padding: 0 5rem 0 5rem;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
     .home h1 {
         font-size: 2.5rem;
         padding: 1rem 0 1rem 0;
@@ -129,37 +129,41 @@
 }
 
 @media (max-width: 850px) {
+    .home {
+        gap: 0.5rem;
+    }
+
     .home h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding: 1rem 0 1rem 0;
     }
 
     .section-1,
     .section-2,
     .section-3 {
-        height: 20rem;
+        height: 15rem;
         width: 100%;
     }
 
     .img-wrapper {
-        height: 20rem;
+        height: 15rem;
         width: 13rem;
     }
 
     .section-1 img {
-        height: 20rem;
+        height: 15rem;
         width: 100%;
     }
 
     .sec1-wrapper {
-        top: -13rem;
+        top: -10rem;
         left: 2rem;
     }
 
     .p-1,
     .p-2,
     .p-3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .p-2,
@@ -169,46 +173,46 @@
 }
 
 @media (max-width: 420px) {
+    .home {
+        gap: 0.5rem;
+    }
+
     .home h1 {
         font-size: 1.5rem;
-        padding: 0.3rem 0 0.3rem 0;
+        padding: 1rem 0 1rem 0;
     }
 
     .section-1,
     .section-2,
     .section-3 {
-        height: 10rem;
+        height: 13rem;
         width: 100%;
     }
 
     .img-wrapper {
         height: 10rem;
-        width: 6rem;
+        width: 7rem;
     }
 
     .section-1 img {
-        height: 10rem;
+        height: 13rem;
         width: 100%;
     }
 
     .sec1-wrapper {
-        width: 10rem;
+        width: 15rem;
         top: -7rem;
-        left: 2rem;
+        right: 10rem;
     }
 
     .p-1,
     .p-2,
     .p-3 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .p-2,
     .p-3 {
-        padding: 0 0.5rem 0 0.5rem;
-    }
-
-    .btn-store {
-        visibility: hidden;
+        padding: 0 2rem 0 2rem;
     }
 }

@@ -36,14 +36,14 @@
     color: black;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
     .contact {
         padding: 1rem 3rem 1rem 3rem;
         font-size: 1.5rem;
     }
 
     .contact-wrapper img {
-        height: 25rem;
+        height: 28rem;
         width: auto;
         margin-bottom: 1rem;
     }
@@ -52,7 +52,7 @@
 @media (max-width: 850px) {
     .contact {
         padding: 1rem 3rem 1rem 3rem;
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .contact-wrapper img {

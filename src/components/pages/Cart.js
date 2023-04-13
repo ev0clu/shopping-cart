@@ -60,12 +60,12 @@ const Cart = ({
                                         text="+"
                                         handleClick={handleIncrementCartClick}
                                     />
-                                    <Button
-                                        className="btn-remove-cart"
-                                        text="Remove from cart"
-                                        handleClick={handleRemoveFromCartClick}
-                                    />
                                 </div>
+                                <Button
+                                    className="btn-remove-cart"
+                                    text="Remove from cart"
+                                    handleClick={handleRemoveFromCartClick}
+                                />
                             </div>
                         );
                     })}
