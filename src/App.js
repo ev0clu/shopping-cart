@@ -39,16 +39,31 @@ const App = () => {
     };
 
     const handleAddToCartClick = (e) => {
-        const index = Number(e.target.parentNode.getAttribute('data-index'));
+        const storeIndex = Number(e.target.parentNode.getAttribute('data-index'));
+        const itemName = e.target.parentNode.children[1].firstChild.textContent;
+        let isItem = false;
+        let itemIndex = 0;
 
         const cart = [...cartItems];
 
-        cart.push({
-            image: items[index].image,
-            title: items[index].title,
-            price: items[index].price,
-            quantity: quantity[index]
-        });
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].title === itemName) {
+                isItem = true;
+                itemIndex = i;
+                break;
+            }
+        }
+
+        if (!isItem) {
+            cart.push({
+                image: items[storeIndex].image,
+                title: items[storeIndex].title,
+                price: items[storeIndex].price,
+                quantity: quantity[storeIndex]
+            });
+        } else {
+            cart[itemIndex].quantity += quantity[storeIndex];
+        }
         setCartItems(cart);
 
         const cartCount = cart.reduce((sum, { quantity }) => sum + quantity, 0);
