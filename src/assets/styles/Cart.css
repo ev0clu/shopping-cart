@@ -1,0 +1,80 @@
+.cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.cart-empty {
+    padding-top: 5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.cart-item-group,
+.btn-cart-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-item-group img {
+    height: 10rem;
+    width: 10rem;
+    padding: 1rem 0.5rem 0 0.5rem;
+    object-fit: contain;
+    object-position: 50% 50%;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 20rem;
+}
+
+.btn-cart-group .btn-increment,
+.btn-cart-group .btn-decrement,
+.btn-cart-group .quantity {
+    height: 0.5rem;
+    width: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.btn-remove-cart {
+    width: 12rem;
+    border: 1px solid black;
+}
+
+.cart-item-group p:nth-child(2) {
+    font-weight: 700;
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 17rem;
+}
+
+.payment h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.cart-sum {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.payment,
+.cart-group {
+    padding: 1rem 2rem 1rem 2rem;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}

@@ -7,8 +7,8 @@ import Button from '../elements/Button';
 const Store = ({
     items,
     quantity,
-    handleIncrementClick,
-    handleDecrementClick,
+    handleIncrementStoreClick,
+    handleDecrementStoreClick,
     handleAddToCartClick
 }) => {
     return (
@@ -19,27 +19,25 @@ const Store = ({
                     return (
                         <div
                             key={`product${index}`}
-                            className="item-group"
+                            className="product-item-group"
                             data-index={index}
                         >
                             <img src={item.image} alt={item.title} />
-                            <div className="item-info">
+                            <div className="product-item-info">
                                 <p>{item.title}</p>
                                 <p>{item.price} EUR</p>
                             </div>
-                            <div className="btn-group">
+                            <div className="btn-product-group">
                                 <Button
                                     className="btn-decrement"
                                     text="-"
-                                    handleClick={handleDecrementClick}
+                                    handleClick={handleDecrementStoreClick}
                                 />
-                                <div className="quantity">
-                                    {quantity[index]}
-                                </div>
+                                <div className="quantity">{quantity[index]}</div>
                                 <Button
                                     className="btn-increment"
                                     text="+"
-                                    handleClick={handleIncrementClick}
+                                    handleClick={handleIncrementStoreClick}
                                 />
                             </div>
                             <Button

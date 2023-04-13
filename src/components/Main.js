@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import '../assets/styles/Main.css';
@@ -10,10 +10,15 @@ import Cart from './pages/Cart';
 
 const Main = ({
     items,
+    cartItems,
     quantity,
-    handleIncrementClick,
-    handleDecrementClick,
-    handleAddToCartClick
+    handleIncrementStoreClick,
+    handleDecrementStoreClick,
+    handleAddToCartClick,
+    handleIncrementCartClick,
+    handleDecrementCartClick,
+    handleRemoveFromCartClick,
+    handleCheckoutClick
 }) => {
     return (
         <main>
@@ -25,14 +30,25 @@ const Main = ({
                         <Store
                             items={items}
                             quantity={quantity}
-                            handleIncrementClick={handleIncrementClick}
-                            handleDecrementClick={handleDecrementClick}
+                            handleIncrementStoreClick={handleIncrementStoreClick}
+                            handleDecrementStoreClick={handleDecrementStoreClick}
                             handleAddToCartClick={handleAddToCartClick}
                         />
                     }
                 />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/cart" element={<Cart />} />
+                <Route
+                    path="/cart"
+                    element={
+                        <Cart
+                            cartItems={cartItems}
+                            handleIncrementCartClick={handleIncrementCartClick}
+                            handleDecrementCartClick={handleDecrementCartClick}
+                            handleRemoveFromCartClick={handleRemoveFromCartClick}
+                            handleCheckoutClick={handleCheckoutClick}
+                        />
+                    }
+                />
             </Routes>
         </main>
     );

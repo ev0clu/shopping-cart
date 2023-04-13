@@ -31,10 +31,9 @@ const Home = () => {
                     <img src={home_2_Img} alt="home-2-img" />
                 </div>
                 <p className="p-2">
-                    From casual wear to formal attire, our fashion experts will
-                    help you create a look that's all your own. With a wide
-                    selection of sizes, colors, and styles, there's something
-                    for everyone{' '}
+                    From casual wear to formal attire, our fashion experts will help
+                    you create a look that's all your own. With a wide selection of
+                    sizes, colors, and styles, there's something for everyone
                 </p>
             </section>
             <section className="section-3">
@@ -42,10 +41,10 @@ const Home = () => {
                     <img src={home_3_Img} alt="home-3-img" />
                 </div>
                 <p className="p-3">
-                    Get ready to stand out from the crowd with our trendy
-                    clothing, shoes, and accessories. Whether you're looking for
-                    a statement piece or a complete wardrobe overhaul, we have
-                    everything you need to express your unique style.
+                    Get ready to stand out from the crowd with our trendy clothing,
+                    shoes, and accessories. Whether you're looking for a statement
+                    piece or a complete wardrobe overhaul, we have everything you
+                    need to express your unique style.
                 </p>
             </section>
         </div>

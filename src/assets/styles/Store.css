@@ -7,7 +7,7 @@
 .store h1 {
     font-size: 5rem;
     text-align: center;
-    padding: 2rem 0 2rem 0;
+    padding: 0 0 2rem 0;
     letter-spacing: 0.1rem;
 }
 
@@ -17,7 +17,7 @@
     gap: 3rem;
 }
 
-.item-group {
+.product-item-group {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,17 +30,17 @@
     border-radius: 16px;
 }
 
-.item-info {
+.product-item-info {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.item-info p:nth-child(1) {
+.product-item-info p:nth-child(1) {
     height: 7rem;
 }
 
-.item-info p:nth-child(2) {
+.product-item-info p:nth-child(2) {
     font-weight: 700;
 }
 
@@ -57,11 +57,11 @@
     border: 1px solid black;
 }
 
-.item-group p {
+.product-item-group p {
     text-align: center;
 }
 
-.btn-group {
+.btn-product-group {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;

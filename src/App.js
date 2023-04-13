@@ -11,9 +11,7 @@ const App = () => {
     const [items, setItems] = useState([]);
     const [cartItems, setCartItems] = useState([]);
     const [cartCounter, setCartCounter] = useState(0);
-    const [quantity, setQuantity] = useState([
-        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
-    ]);
+    const [quantity, setQuantity] = useState([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
 
     useEffect(() => {
         fetchItems();
@@ -43,9 +41,10 @@ const App = () => {
     const handleAddToCartClick = (e) => {
         const index = Number(e.target.parentNode.getAttribute('data-index'));
 
-        const cart = cartItems;
+        const cart = [...cartItems];
 
         cart.push({
+            image: items[index].image,
             title: items[index].title,
             price: items[index].price,
             quantity: quantity[index]
@@ -56,7 +55,21 @@ const App = () => {
         setCartCounter(cartCount);
     };
 
-    const handleIncrementClick = (e) => {
+    const handleRemoveFromCartClick = (e) => {
+        const index = Number(
+            e.target.parentNode.parentNode.getAttribute('data-index')
+        );
+
+        const cart = [...cartItems];
+
+        cart.splice(index, 1);
+        setCartItems(cart);
+
+        const cartCount = cart.reduce((sum, { quantity }) => sum + quantity, 0);
+        setCartCounter(cartCount);
+    };
+
+    const handleIncrementStoreClick = (e) => {
         const index = Number(
             e.target.parentNode.parentNode.getAttribute('data-index')
         );
@@ -64,12 +77,11 @@ const App = () => {
         if (quantity[index] < 10) {
             const newQuantity = [...quantity];
             newQuantity[index] = newQuantity[index] + 1;
-
             setQuantity(newQuantity);
         }
     };
 
-    const handleDecrementClick = (e) => {
+    const handleDecrementStoreClick = (e) => {
         const index = Number(
             e.target.parentNode.parentNode.getAttribute('data-index')
         );
@@ -77,9 +89,48 @@ const App = () => {
         if (quantity[index] > 1) {
             const newQuantity = [...quantity];
             newQuantity[index] = newQuantity[index] - 1;
-
             setQuantity(newQuantity);
         }
+    };
+
+    const handleIncrementCartClick = (e) => {
+        const index = Number(
+            e.target.parentNode.parentNode.getAttribute('data-index')
+        );
+
+        if (cartItems[index].quantity < 10) {
+            const newQuantity = [...cartItems];
+            newQuantity[index].quantity = newQuantity[index].quantity + 1;
+            setCartItems(newQuantity);
+
+            const cartCount = cartItems.reduce(
+                (sum, { quantity }) => sum + quantity,
+                0
+            );
+            setCartCounter(cartCount);
+        }
+    };
+
+    const handleDecrementCartClick = (e) => {
+        const index = Number(
+            e.target.parentNode.parentNode.getAttribute('data-index')
+        );
+
+        if (cartItems[index].quantity > 1) {
+            const newQuantity = [...cartItems];
+            newQuantity[index].quantity = newQuantity[index].quantity - 1;
+            setCartItems(newQuantity);
+
+            const cartCount = newQuantity.reduce(
+                (sum, { quantity }) => sum + quantity,
+                0
+            );
+            setCartCounter(cartCount);
+        }
+    };
+
+    const handleCheckoutClick = () => {
+        alert('Thank you for purchasing');
     };
 
     return (
@@ -88,10 +139,15 @@ const App = () => {
                 <Header cartCounter={cartCounter} />
                 <Main
                     items={items}
+                    cartItems={cartItems}
                     quantity={quantity}
-                    handleIncrementClick={handleIncrementClick}
-                    handleDecrementClick={handleDecrementClick}
+                    handleIncrementStoreClick={handleIncrementStoreClick}
+                    handleDecrementStoreClick={handleDecrementStoreClick}
                     handleAddToCartClick={handleAddToCartClick}
+                    handleIncrementCartClick={handleIncrementCartClick}
+                    handleDecrementCartClick={handleDecrementCartClick}
+                    handleRemoveFromCartClick={handleRemoveFromCartClick}
+                    handleCheckoutClick={handleCheckoutClick}
                 />
                 <Footer />
             </div>

@@ -3,7 +3,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5rem 1rem 5rem;
+    padding: 1rem 10rem 1rem 10rem;
     color: black;
     position: sticky;
     position: -webkit-sticky;
@@ -42,6 +42,10 @@ header {
     color: black;
 }
 
+.nav-links a:visited {
+    text-decoration: #0c4a6e;
+}
+
 .nav-links a:hover {
     transition: transform 0.5s;
 }
@@ -63,16 +67,16 @@ header {
     transform: scaleX(1);
 }
 
-.cart {
+.cart-icon {
     font-size: 2rem;
     color: black;
 }
 
-.cart a:hover {
+.cart-icon a:hover {
     color: #737373;
 }
 
-.cart-counter {
+.cart-icon-counter {
     position: absolute;
     font-size: 1rem;
     font-weight: 900;
@@ -103,7 +107,7 @@ header {
         font-size: 1.5rem;
     }
 
-    .cart {
+    .cart-icon {
         font-size: 1.5rem;
         color: black;
     }

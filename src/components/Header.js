@@ -19,10 +19,10 @@ const Header = ({ cartCounter }) => {
                 <li className="nav-item">
                     <Link to="/contact">Contact</Link>
                 </li>
-                <li className="cart">
+                <li className="cart-icon">
                     <Link to="/cart">
                         {cartCounter > 0 && (
-                            <div className="cart-counter">{cartCounter}</div>
+                            <div className="cart-icon-counter">{cartCounter}</div>
                         )}
 
                         <FaShoppingCart />
